@@ -31,7 +31,7 @@ platform_cflags = -Wno-psabi
 platform_linkflags = 
 platform_dllflags = 
 platform_include = 
-osdir = Posix
+osdir = Linux-x64
 endif
 
 
@@ -39,13 +39,13 @@ endif
 
 ar = ${CROSS_COMPILE}ar rc $(objdir)
 cflags = -fexceptions -Wall -Werror -pipe -std=c++11 -D_GNU_SOURCE -D_REENTRANT -DDEFINE_LITTLE_ENDIAN -DDEFINE_TRACE $(debug_specific_flags) -fvisibility=hidden -DDllImport="__attribute__ ((visibility(\"default\")))" -DDllExport="__attribute__ ((visibility(\"default\")))" -DDllExportClass="__attribute__ ((visibility(\"default\")))" $(platform_cflags)
-ohnetdir = ../ohNet/Build/Obj/$(osdir)/$(build_dir)/
-ohnetgenerateddir = ../ohNetGenerated/Build/Obj/$(osdir)/$(build_dir)/
+ohnetdir = ../ohTopology/dependencies/$(osdir)/ohNet-$(osdir)-$(build_dir)/lib/
+ohnetgenerateddir = ../ohTopology/dependencies/$(osdir)/ohNetGenerated-$(osdir)-$(build_dir)/lib/
 ohtopologydir = ../ohTopology/build/
 ohnetmondir = ../ohNetmon/build/
 objdir = Build/Obj/$(osdir)/$(build_dir)/
 inc_build = Build/Include/
-includes = -I../ohNet/Build/Include/ -I../ohNetGenerated/Build/Include/ -I$(ohtopologydir)Include/ $(platform_includes)
+includes = -I../ohTopology/dependencies/$(osdir)/ohNet-$(osdir)-$(build_dir)/include/ohnet -I../ohTopology/dependencies/$(osdir)/ohNetGenerated-$(osdir)-$(build_dir)/include/ohnet -I$(ohtopologydir)Include/ $(platform_includes)
 objext = o
 libprefix = lib
 libext = a
