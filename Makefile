@@ -38,7 +38,7 @@ endif
 # Macros used by Common.mak
 
 ar = ${CROSS_COMPILE}ar rc $(objdir)
-cflags = -fexceptions -Wall -Werror -pipe -std=c++11 -D_GNU_SOURCE -D_REENTRANT -DDEFINE_LITTLE_ENDIAN -DDEFINE_TRACE $(debug_specific_flags) -fvisibility=hidden -DDllImport="__attribute__ ((visibility(\"default\")))" -DDllExport="__attribute__ ((visibility(\"default\")))" -DDllExportClass="__attribute__ ((visibility(\"default\")))" $(platform_cflags)
+cflags = -fexceptions -Wall -pipe -std=c++11 -D_GNU_SOURCE -D_REENTRANT -DDEFINE_LITTLE_ENDIAN -DDEFINE_TRACE $(debug_specific_flags) -fvisibility=hidden -DDllImport="__attribute__ ((visibility(\"default\")))" -DDllExport="__attribute__ ((visibility(\"default\")))" -DDllExportClass="__attribute__ ((visibility(\"default\")))" $(platform_cflags)
 ohnetdir = ../ohNet/Build/Obj/$(osdir)/$(build_dir)/
 ohnetgenerateddir = ../ohNetGenerated/Build/Obj/$(osdir)/$(build_dir)/
 ohtopologydir = ../ohTopology/build/

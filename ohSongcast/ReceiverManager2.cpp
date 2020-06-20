@@ -502,11 +502,11 @@ void ReceiverManager2::ReceiverVolumeLimitChanged(ReceiverManager1Receiver& aRec
 
 void ReceiverManager2::ReceiverAdded(ReceiverManager2Receiver& aReceiver)
 {
-    LOG(kTrace, "ReceiverManager2::ReceiverAdded ");
-    LOG(kTrace, aReceiver.Room());
-    LOG(kTrace, ":");
-    LOG(kTrace, aReceiver.Group());
-    LOG(kTrace, "\n");
+    LOG(kSeverityTrace, "ReceiverManager2::ReceiverAdded ");
+    LOG(kSeverityTrace, aReceiver.Room());
+    LOG(kSeverityTrace, ":");
+    LOG(kSeverityTrace, aReceiver.Group());
+    LOG(kSeverityTrace, "\n");
 
 	ReceiverManager2Job* job = iFree.Read();
 	job->Set(aReceiver, &IReceiverManager2Handler::ReceiverAdded);
@@ -515,11 +515,11 @@ void ReceiverManager2::ReceiverAdded(ReceiverManager2Receiver& aReceiver)
 
 void ReceiverManager2::ReceiverChanged(ReceiverManager2Receiver& aReceiver)
 {
-    LOG(kTrace, "ReceiverManager2::ReceiverChanged ");
-    LOG(kTrace, aReceiver.Room());
-    LOG(kTrace, ":");
-    LOG(kTrace, aReceiver.Group());
-    LOG(kTrace, "\n");
+    LOG(kSeverityTrace, "ReceiverManager2::ReceiverChanged ");
+    LOG(kSeverityTrace, aReceiver.Room());
+    LOG(kSeverityTrace, ":");
+    LOG(kSeverityTrace, aReceiver.Group());
+    LOG(kSeverityTrace, "\n");
 
 	ReceiverManager2Job* job = iFree.Read();
 	job->Set(aReceiver, &IReceiverManager2Handler::ReceiverChanged);
@@ -528,11 +528,11 @@ void ReceiverManager2::ReceiverChanged(ReceiverManager2Receiver& aReceiver)
 
 void ReceiverManager2::ReceiverRemoved(ReceiverManager2Receiver& aReceiver)
 {
-    LOG(kTrace, "ReceiverManager2::ReceiverRemoved ");
-    LOG(kTrace, aReceiver.Room());
-    LOG(kTrace, ":");
-    LOG(kTrace, aReceiver.Group());
-    LOG(kTrace, "\n");
+    LOG(kSeverityTrace, "ReceiverManager2::ReceiverRemoved ");
+    LOG(kSeverityTrace, aReceiver.Room());
+    LOG(kSeverityTrace, ":");
+    LOG(kSeverityTrace, aReceiver.Group());
+    LOG(kSeverityTrace, "\n");
 
 	ReceiverManager2Job* job = iFree.Read();
 	job->Set(aReceiver, &IReceiverManager2Handler::ReceiverRemoved);

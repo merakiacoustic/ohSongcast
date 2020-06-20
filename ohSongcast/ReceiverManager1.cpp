@@ -524,33 +524,33 @@ void ReceiverManager1::RoomVolumeLimitChanged(IRoom& aRoom)
 // IReceiverManager1Handler
 void ReceiverManager1::ReceiverAdded(ReceiverManager1Receiver& aReceiver)
 {
-    LOG(kTrace, "ReceiverManager1::ReceiverAdded ");
-    LOG(kTrace, aReceiver.Room());
-    LOG(kTrace, ":");
-    LOG(kTrace, aReceiver.Group());
-    LOG(kTrace, "\n");
+    LOG(kSeverityTrace, "ReceiverManager1::ReceiverAdded ");
+    LOG(kSeverityTrace, aReceiver.Room());
+    LOG(kSeverityTrace, ":");
+    LOG(kSeverityTrace, aReceiver.Group());
+    LOG(kSeverityTrace, "\n");
 
     iHandler.ReceiverAdded(aReceiver);
 }
 
 void ReceiverManager1::ReceiverChanged(ReceiverManager1Receiver& aReceiver)
 {
-    LOG(kTrace, "ReceiverManager1::ReceiverChanged ");
-    LOG(kTrace, aReceiver.Room());
-    LOG(kTrace, ":");
-    LOG(kTrace, aReceiver.Group());
-    LOG(kTrace, "\n");
+    LOG(kSeverityTrace, "ReceiverManager1::ReceiverChanged ");
+    LOG(kSeverityTrace, aReceiver.Room());
+    LOG(kSeverityTrace, ":");
+    LOG(kSeverityTrace, aReceiver.Group());
+    LOG(kSeverityTrace, "\n");
 
     iHandler.ReceiverChanged(aReceiver);
 }
 
 void ReceiverManager1::ReceiverRemoved(ReceiverManager1Receiver& aReceiver)
 {
-    LOG(kTrace, "ReceiverManager1::ReceiverRemoved ");
-    LOG(kTrace, aReceiver.Room());
-    LOG(kTrace, ":");
-    LOG(kTrace, aReceiver.Group());
-    LOG(kTrace, "\n");
+    LOG(kSeverityTrace, "ReceiverManager1::ReceiverRemoved ");
+    LOG(kSeverityTrace, aReceiver.Room());
+    LOG(kSeverityTrace, ":");
+    LOG(kSeverityTrace, aReceiver.Group());
+    LOG(kSeverityTrace, "\n");
 
     iHandler.ReceiverRemoved(aReceiver);
 }
